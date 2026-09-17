@@ -151,7 +151,7 @@ function initOrderPage() {
    ========================================================================== */
 async function initAdminPage() {
   // แก้ไข: ลบวงเล็บ [ ] ออกจาก URL
-  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRfyNOf4ptqeQPNQN2HVi7UV5OszXoRILjBZodeGokLLwawzD3IkJPpE1uwLrse7gwickfIr7RnhZTZ/pub?output=csv';
+  const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRfyNOf4ptqeQPNQN2HVi7UV5OszXoRILjBZodeGokLLwawzD3IkJPpE1uwLrse7gwickfIr7RnhZTZ/pub?gid=0&single=true&output=csv';
   const tableBody = document.querySelector('#ordersTable tbody');
 
   if (!tableBody) return;
