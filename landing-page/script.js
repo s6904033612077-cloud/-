@@ -112,7 +112,7 @@ function initOrderPage() {
       e.preventDefault();
 
       // แก้ไข: ลบวงเล็บ [ ] ออกจาก URL
-      const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbzXRMFHwG5HdcmljIUGeCnwhOc81_1d7_i14dW3krAhH7rdSH3L9ptJhN94oZZCww6cFA/exec';
+      const appsScriptUrl = 'https://script.google.com/macros/s/AKfycbz-b-ySPxcSBB9dsxyCydHSHJwQs1N4BpEfP9I22XdglgX6G8WXu_HoimbSfz47KvISgw/exec';
 
       const formData = new FormData(orderForm);
       const urlParamsData = new URLSearchParams();
