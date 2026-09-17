@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Crepe - รายการสินค้า</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html" style="text-decoration:none;">
+          <div class="logo-title">Crispy Crepe</div>
+        </a>
+        <div class="logo-tagline">| Bakery & Dessert</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">หน้าแรก</a>
+        <a href="product.html" class="nav-link active">เมนูสินค้า</a>
+        <a href="admin.html" class="nav-link">ผู้ดูแลระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Product Section -->
+  <main class="container main-content">
+    <div class="page-header">
+      <h1 class="page-title">เมนูเครปทั้งหมด</h1>
+      <p class="page-subtitle">เลือกตาม Mood รสชาติที่คุณชื่นชอบ</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div id="filter-bar" class="filter-section">
+      <button class="filter-btn active" data-mood="all">ทั้งหมด</button>
+      <button class="filter-btn" data-mood="sweet">Sweet</button>
+      <button class="filter-btn" data-mood="chocolate">Chocolate</button>
+      <button class="filter-btn" data-mood="savory">Savory</button>
+      <button class="filter-btn" data-mood="fruit">Fruit</button>
+    </div>
+
+    <!-- Product List Grid -->
+    <div id="product-list" class="product-grid">
+      <!-- script.js จะเติมข้อมูลสินค้าที่นี่ -->
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">Crispy Crepe</div>
+      <p class="footer-text">เปิดบริการทุกวัน 09:00 - 20:00 น. | เครปอบสดใหม่ทุกแผ่นเพื่อคุณ</p>
+      <p class="copyright">&copy; 2026 Crispy Crepe. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

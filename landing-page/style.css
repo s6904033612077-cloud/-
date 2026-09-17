@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Crispy Crepe - Style Sheet
+   Theme: Warm Cream & Premium Brown Bakery Style
+   ========================================================================== */
+
+/* 1. Imports & CSS Variables */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-main: #FFFDF9;           /* ครีมอ่อนนุ่มนวล */
+  --bg-card: #FFFFFF;           /* ขาวบริสุทธิ์สำหรับการ์ด */
+  --bg-surface: #F9F3EA;        /* ครีมอมน้ำตาลละมุน */
+  
+  --primary: #6F4E37;          /* น้ำตาลคั่วเข้ม อบอุ่น */
+  --primary-hover: #543A27;    /* น้ำตาลเข้มสำหรับ Hover */
+  --secondary: #D4A373;        /* น้ำตาลทอง อบอุ่น */
+  --accent: #E07A5F;           /* สีส้มอิฐ/เบอร์รีสำหรับจุดเด่น */
+  
+  --text-primary: #3D2C1E;     /* น้ำตาลเข้มเกือบดำ สำหรับข้อความหลัก */
+  --text-secondary: #7A6858;   /* น้ำตาลเทา สำหรับข้อความย่อย */
+  --text-light: #A39282;       /* น้ำตาลอ่อนสำหรับ Placeholder/Border */
+  
+  /* Borders & Shadows */
+  --border-color: #EFE6D8;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(111, 78, 55, 0.05);
+  --shadow-md: 0 8px 20px rgba(111, 78, 55, 0.08);
+  --shadow-lg: 0 16px 32px rgba(111, 78, 55, 0.12);
+  
+  /* Layout & Transitions */
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --max-width: 1200px;
+}
+
+/* 2. Base & Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* 3. Layout & Structure */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Hero */
+.header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.5px;
+}
+
+.logo-tagline {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.hero {
+  background: linear-gradient(135deg, #F9F3EA 0%, #FFF5E4 100%);
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Filter / Mood Selector */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  padding: 10px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.filter-btn:hover {
+  background-color: #F0E4D4;
+  color: var(--primary);
+}
+
+.filter-btn.active {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(111, 78, 55, 0.25);
+}
+
+/* 4. Product Grid & Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.product-card {
+  background-color: var(--bg-card);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary);
+}
+
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Aspect Ratio 4:3 */
+  background-color: var(--bg-surface);
+  overflow: hidden;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.mood-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mood-badge.chocolate {
+  background-color: rgba(61, 44, 30, 0.85);
+  color: #FFF;
+}
+
+.mood-badge.sweet {
+  background-color: rgba(244, 162, 97, 0.9);
+  color: #FFF;
+}
+
+.mood-badge.savory {
+  background-color: rgba(224, 122, 95, 0.9);
+  color: #FFF;
+}
+
+.mood-badge.fruit {
+  background-color: rgba(129, 178, 154, 0.9);
+  color: #FFF;
+}
+
+.product-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.product-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.product-price::after {
+  content: " บาท";
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.order-btn {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.order-btn:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 10px rgba(111, 78, 55, 0.2);
+}
+
+/* 5. Footer Section */
+.footer {
+  background-color: var(--primary);
+  color: var(--bg-surface);
+  padding: 40px 0 20px 0;
+  margin-top: 40px;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #D4A373;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #A39282;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+/* 6. Responsive Design (Mobile First Tweaks) */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  
+  .filter-section {
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

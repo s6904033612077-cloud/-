@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Crepe - แบบฟอร์มสั่งซื้อ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="index.html" style="text-decoration:none;">
+          <div class="logo-title">Crispy Crepe</div>
+        </a>
+        <div class="logo-tagline">| Bakery & Dessert</div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">หน้าแรก</a>
+        <a href="product.html" class="nav-link">เมนูสินค้า</a>
+        <a href="admin.html" class="nav-link">ผู้ดูแลระบบ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Order Form Section -->
+  <main class="container main-content">
+    <div class="form-card">
+      <h1 class="form-title">สั่งซื้อสินค้า</h1>
+      <p class="form-subtitle">กรอกข้อมูลสำหรับจัดส่งเครปร้อนๆ ส่งตรงถึงมือคุณ</p>
+
+      <form id="orderForm" class="order-form">
+        <div class="form-group">
+          <label for="customerName">ชื่อ-นามสกุล ผู้สั่งซื้อ *</label>
+          <input type="text" id="customerName" name="customerName" placeholder="เช่น คุณสมชาย ใจดี" required>
+        </div>
+
+        <div class="form-group">
+          <label for="contact">เบอร์โทรศัพท์ / ช่องทางติดต่อ *</label>
+          <input type="text" id="contact" name="contact" placeholder="เช่น 081-234-5678" required>
+        </div>
+
+        <div class="form-group">
+          <label for="items">รายการสินค้าที่สั่งซื้อ</label>
+          <input type="text" id="items" name="items" readonly class="readonly-input">
+        </div>
+
+        <div class="form-group">
+          <label for="total">ราคารวม (บาท)</label>
+          <input type="text" id="total" name="total" readonly class="readonly-input">
+        </div>
+
+        <div class="form-group">
+          <label for="note">หมายเหตุเพิ่มเติม (เช่น ระดับความกรอบ / ไม่ใส่ผัก)</label>
+          <textarea id="note" name="note" rows="3" placeholder="ระบุความต้องการเพิ่มเติม..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">ยืนยันการสั่งซื้อ</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">Crispy Crepe</div>
+      <p class="footer-text">เปิดบริการทุกวัน 09:00 - 20:00 น. | เครปอบสดใหม่ทุกแผ่นเพื่อคุณ</p>
+      <p class="copyright">&copy; 2026 Crispy Crepe. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
